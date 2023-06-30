@@ -18,4 +18,9 @@ export class HttpClientService {
     //TODO add localhost url
     return this.httpClient.get<User[]>("url");
   }
+
+  addUser(newUser:User){
+
+    return this.httpClient.post<User>("add user url",newUser);
+  }
 }
