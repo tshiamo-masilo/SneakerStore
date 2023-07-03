@@ -1,0 +1,26 @@
+<h1>Sneaker Admin</h1>
+
+<div class="container row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>SNEAKER</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sneaker of sneakers"></tr>
+        <td>{{sneaker.id}}</td>
+        <td>{{sneaker.name}}</td>
+        <td>
+          <button type="button" class="btn btn-prmary" (click)="setBook(sneaker.id)">Show Details</button>
+        </td>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    View Sneaker Details/Add Sneaker
+  </div>
+</div>

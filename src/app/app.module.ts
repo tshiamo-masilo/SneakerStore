@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { UserComponent } from './admin/user/user.component';
 import { AddUserComponent } from './admin/user/add-user/add-user.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { ViewUserComponent } from './admin/user/view-user/view-user.component';
+import { SneakerComponent } from './admin/sneaker/sneaker.component'
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import {FormsModule} from '@angular/forms'
     AppComponent,
     MenuComponent,
     UserComponent,
-    AddUserComponent
+    AddUserComponent,
+    ViewUserComponent,
+    SneakerComponent
 
   ],
   imports: [

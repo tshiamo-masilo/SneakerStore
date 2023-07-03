@@ -11,8 +11,8 @@ import {User} from '../../model/User';
 export class UserComponent implements OnInit {
 
   users?: Array<User>
-  selectedUser?: User;
-  action?: string;
+  selectedUser: User = new User();
+  action: string = "";
   constructor(private httpClientService: HttpClientService,
     private router: Router,
     private acticatedRoute: ActivatedRoute){}
@@ -33,8 +33,17 @@ export class UserComponent implements OnInit {
     )
 
     this.acticatedRoute.queryParamMap.subscribe(params=>{
-        this.action = params.get('action')!
+        this.action = params.get('action') ?? " ";
+        const selectedUserId = params.get('id');
+        if(selectedUserId){
+          this.selectedUser = this.users?.find(user=>user.id ===+selectedUserId) ?? new User();
+        }
+
     });
+  }
+
+  viewUser(id:number){
+    this.router.navigate(['admin', 'user'], {queryParams : {id, action: 'view'}})
   }
   ngOnInit(){
     this.refreshData();
