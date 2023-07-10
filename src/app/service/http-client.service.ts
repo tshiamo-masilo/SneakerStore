@@ -28,7 +28,7 @@ export class HttpClientService {
     return this.httpClient.delete<User>("localhost//"+id);
   }
 
-  getBooks(){
+  getSneaker(){
     return this.httpClient.get<Sneaker[]>("urllinkto get all books");
   }
 

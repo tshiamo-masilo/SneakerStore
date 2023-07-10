@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SneakerComponent } from './admin/sneaker/sneaker.component';
 import { UserComponent } from './admin/user/user.component';
-import { Sneaker } from './model/Sneaker';
 
 const routes: Routes = [
   {path:'admin/users', component: UserComponent},
-  {path:'admin/sneaker', component: Sneaker}
+  {path:'admin/sneakers', component: SneakerComponent}
 ];
 
 @NgModule({

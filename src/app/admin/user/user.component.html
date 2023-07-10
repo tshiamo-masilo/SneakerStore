@@ -24,7 +24,7 @@
     </table>
   </div>
   <div class="col-md-6">
-    <app-add-user *ngIf="action === 'add'" [user]="selectedUser"></app-add-user>
+    <app-add-user *ngIf="action === 'add'" [user]="selectedUser" (userAddedEvent)="refreshData()"></app-add-user>
     <app-view-user *ngIf="action === 'view'" [user]="selectedUser"></app-view-user>
   </div>
 </div>

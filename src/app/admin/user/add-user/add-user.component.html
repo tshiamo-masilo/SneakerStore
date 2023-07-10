@@ -1,14 +1,15 @@
 <h1>Add Users</h1>
 <form #receievdUser="ngForm">
   <label for="name">Name</label>
-<input type="text" class ="form-control" id="name" [(ngModel)]="user.name" name ="name">
+<input type="text" class ="form-control" id="name" [(ngModel)]="user!.name " name ="name">
 
 <label for="type">Type</label>
-<input type="type" class="form-control" id="type" [(ngModel)] = "user.type" name="name">
+<input type="type" class="form-control" id="type" [(ngModel)] = "user!.type" name="name">
 
 <label for="password">Password</label>
-<input type="password" class="form-control" id="password" [(ngModel)] = "user.password" name ="password">
+<input type="password" class="form-control" id="password" [(ngModel)] = "user!.password" name ="password">
 
 <br>
-<button type="button" *ngIf="action==='add'" [user]="selectedUser" class="btn btn-success" (click)="addUser() ">Save</button>
+<!-- <button type="button" *ngIf="action==='add'" [user]="selectedUser" class="btn btn-success" (click)="addUser() ">Save</button> -->
+<button type="button" class="btn btn-success" (click)="addUser()">Save</button>
 </form>

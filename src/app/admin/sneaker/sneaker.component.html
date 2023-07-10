@@ -1,5 +1,4 @@
 <h1>Sneaker Admin</h1>
-
 <div class="container row">
   <div class="col-md-6">
     <table class="table">
@@ -11,16 +10,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let sneaker of sneakers"></tr>
-        <td>{{sneaker.id}}</td>
-        <td>{{sneaker.name}}</td>
-        <td>
-          <button type="button" class="btn btn-prmary" (click)="setBook(sneaker.id)">Show Details</button>
+        <tr *ngFor='let shoe of sneakers'>
+          <td>{{shoe.id}}</td>
+          <td>{{shoe.name}}</td>
+          <td>
+          <button type="button" class="btn btn-prmary" (click)="setSneaker(shoe.id)">Show Details</button>
         </td>
+        </tr>
       </tbody>
     </table>
   </div>
   <div class="col-md-6">
-    View Sneaker Details/Add Sneaker
   </div>
 </div>

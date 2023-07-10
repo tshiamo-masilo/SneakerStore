@@ -5,4 +5,5 @@ export class Sneaker{
   startTime: number=0;
   endTime:number=0;
   picByte:string="";
+  retrievedImage: string="";
 }
